@@ -1,0 +1,20 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      backgroundImage:{
+        bannerImg: "url('/img/fondoBlanco3.jpg')"
+      },
+      colors:{
+        customGray: '#BDC3C7',
+        customColorText: '#5FCDD9',
+      }
+    },
+  },
+  plugins: [],
+}
+
