@@ -1,5 +1,7 @@
 import {NavLink, Outlet} from "react-router";
 import {useEffect} from "react";
+import {AboutMe} from "./AboutMe.jsx";
+import {Projects} from "./Projects.jsx";
 
 
 export const MainSection = () => {
@@ -11,10 +13,11 @@ export const MainSection = () => {
                     {
                         className: 'snowflake bg-gradient-to-r from-blue-400 to-blue-600',
                         style: `
-          left: ${Math.random() * window.innerWidth}px;
-          top: -5px;
-          opacity: ${Math.random()};
-          transform: scale(${Math.random() * 1.5 + 0.5});`
+                        left: ${Math.random() * window.innerWidth}px;
+                        top: -5px;
+                        opacity: ${Math.random() * 0.8 + 0.2}; /* Opacidad entre 0.2 y 1 */
+                        transform: scale(${Math.random() * 1.5 + 0.5});
+                    `
                     }
                 );
 
@@ -49,54 +52,46 @@ export const MainSection = () => {
 
         return null;
     };
+
     return (
         <>
-            <Snowflakes/>
-            <section className="relative w-full h-screen">
-                <div className="relative z-20 flex flex-row justify-center items-center gap-10 w-full h-full">
-                    <div className="relative w-[80%] h-[95%] flex rounded-lg bg-white overflow-hidden">
-                        <div
-                            className="absolute top-0 right-0 translate-x-4 -translate-y-1/4 w-32 h-32 bg-gradient-to-r from-blue-400 to-blue-600"
-                            style={{clipPath: "polygon(100% 0, 100% 100%, 0 0)"}}></div>
+            <div className="relative h-screen flex gap-16 rounded-lg  bg-white overflow-hidden">
+                {/* Sección izquierda fija y ocupando espacio */}
+                <section className="p-10 min-w-[230px] bg-customGray h-screen flex-shrink-0">
+                    <div className="h-full flex flex-col items-center ">
+                        <div className="flex flex-col items-center">
+                            <img
+                                className="w-28 rounded-full"
+                                src="../public/img/MichelleProfile.png"
+                                alt="Foto de perfil"
+                            />
+                            <h2>Miriam Oleaga</h2>
+                            <span className="text-xs">Arquitecto Especialista BIM</span>
+                        </div>
 
-                        <div
-                            className="absolute bottom-0 right-0 translate-x-0 translate-y-1/3 w-32 h-32 bg-gradient-to-r from-blue-400 to-blue-600"
-                            style={{clipPath: "polygon(100% 0, 100% 100%, 0 100%)"}}></div>
-
-                        <section className="p-10 min-w-[230px] bg-customGray">
-                            <div className="h-full flex flex-col items-center ">
-                                <div className="flex flex-col items-center">
-                                    <img
-                                        className="w-28 rounded-full"
-                                        src="../public/img/MichelleProfile.png"
-                                        alt="Foto de perfil"
-                                    />
-                                    <h2>Miriam Oleaga</h2>
-                                    <span className="text-xs">Arquitecto Especialista BIM</span>
-                                </div>
-
-                                <ul className="flex flex-col items-start gap-2 mt-10">
-                                    <NavLink to="/">-Acerca de mi</NavLink>
-                                    <NavLink to="projects">-Proyectos</NavLink>
-                                    <NavLink to="habilidades">-Habilidades</NavLink>
-                                    <NavLink to="experiencia">-Experiencia laboral</NavLink>
-                                    <NavLink to="/contact">-Contacto</NavLink>
-                                </ul>
-                            </div>
-                            <footer className="flex justify-between items-center gap-2">
-                                <img className="w-6" src="../public/svg/mail.svg" alt="Telephone"/>
-                                <img className="w-5" src="../public/svg/instagram.svg" alt="Telephone"/>
-                                <img className="w-5" src="../public/svg/linkedin.svg" alt="Telephone"/>
-                            </footer>
-                        </section>
-
-                        {/* Sección derecha (contenido) */}
-                        <section className="ml-16 p-10">
-                            <Outlet/>
-                        </section>
+                        <ul className="flex flex-col items-start gap-2 mt-10">
+                            <NavLink to="/">-Acerca de mi</NavLink>
+                            <NavLink to="projects">-Proyectos</NavLink>
+                            <NavLink to="habilidades">-Habilidades</NavLink>
+                            <NavLink to="experiencia">-Experiencia laboral</NavLink>
+                            <NavLink to="/contact">-Contacto</NavLink>
+                        </ul>
                     </div>
-                </div>
-            </section>
+                    <footer className="flex justify-between items-center gap-2">
+                        <img className="w-6" src="../public/svg/mail.svg" alt="Email"/>
+                        <img className="w-5" src="../public/svg/instagram.svg" alt="Instagram"/>
+                        <img className="w-5" src="../public/svg/linkedin.svg" alt="LinkedIn"/>
+                    </footer>
+                </section>
+
+                {/* Sección derecha con scroll */}
+                <section className="flex-1 p-10 overflow-y-auto h-screen">
+                    <AboutMe/>
+                    <Projects/>
+                </section>
+            </div>
         </>
-    )
+    );
+
+
 }
