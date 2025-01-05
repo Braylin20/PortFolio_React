@@ -54,7 +54,7 @@ export const MainSection = () => {
             <Snowflakes />
             <section className="relative w-full h-screen">
                 <div className="relative z-20 flex flex-row justify-center items-center gap-10 w-full h-full">
-                    <div className="relative w-[80%] h-[80%] flex rounded-lg bg-white overflow-hidden">
+                    <div className="relative w-[80%] h-[95%] flex rounded-lg bg-white overflow-hidden">
                         <div
                             className="absolute top-0 right-0 translate-x-4 -translate-y-1/4 w-32 h-32 bg-gradient-to-r from-blue-400 to-blue-600"
                             style={{clipPath: "polygon(100% 0, 100% 100%, 0 0)"}}></div>
@@ -83,13 +83,16 @@ export const MainSection = () => {
                                     <NavLink to="/contact">-Contacto</NavLink>
                                 </ul>
                             </div>
+                            <footer className="flex justify-between items-center gap-2">
+                                    <img className="w-6" src="../public/svg/mail.svg" alt="Telephone"/>
+                                    <img className="w-5" src="../public/svg/instagram.svg" alt="Telephone"/>
+                                    <img className="w-5" src="../public/svg/linkedin.svg" alt="Telephone"/>
+                            </footer>
                         </section>
 
                         {/* Sección derecha (contenido) */}
                         <section className="ml-16 p-10">
                             <Outlet/>
-
-
                         </section>
                     </div>
                 </div>
