@@ -3,7 +3,7 @@
 export const AboutMe = () => {
   return(
       <>
-          <div className="flex flex-col justify-center h-full">
+          <div className="flex flex-col h-full">
               <h2 className="text-3xl mb-8 relative w-fit">
                   About me
                   <div
