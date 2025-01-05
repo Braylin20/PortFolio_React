@@ -21,7 +21,7 @@ export const MainSection = () => {
                 document.body.appendChild(snowflake);
 
                 let posY = -5;
-                let speed = Math.random()  + 1;
+                let speed = Math.random() + 1;
                 let wobble = 0;
 
                 function fall() {
@@ -51,7 +51,7 @@ export const MainSection = () => {
     };
     return (
         <>
-            <Snowflakes />
+            <Snowflakes/>
             <section className="relative w-full h-screen">
                 <div className="relative z-20 flex flex-row justify-center items-center gap-10 w-full h-full">
                     <div className="relative w-[80%] h-[95%] flex rounded-lg bg-white overflow-hidden">
@@ -77,16 +77,16 @@ export const MainSection = () => {
 
                                 <ul className="flex flex-col items-start gap-2 mt-10">
                                     <NavLink to="/">-Acerca de mi</NavLink>
-                                    <NavLink to="habilidades">-Proyectos</NavLink>
+                                    <NavLink to="projects">-Proyectos</NavLink>
                                     <NavLink to="habilidades">-Habilidades</NavLink>
                                     <NavLink to="experiencia">-Experiencia laboral</NavLink>
                                     <NavLink to="/contact">-Contacto</NavLink>
                                 </ul>
                             </div>
                             <footer className="flex justify-between items-center gap-2">
-                                    <img className="w-6" src="../public/svg/mail.svg" alt="Telephone"/>
-                                    <img className="w-5" src="../public/svg/instagram.svg" alt="Telephone"/>
-                                    <img className="w-5" src="../public/svg/linkedin.svg" alt="Telephone"/>
+                                <img className="w-6" src="../public/svg/mail.svg" alt="Telephone"/>
+                                <img className="w-5" src="../public/svg/instagram.svg" alt="Telephone"/>
+                                <img className="w-5" src="../public/svg/linkedin.svg" alt="Telephone"/>
                             </footer>
                         </section>
 
