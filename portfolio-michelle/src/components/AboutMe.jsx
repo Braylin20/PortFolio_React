@@ -1,9 +1,10 @@
+import {InformationCard} from "./InformationCard.jsx";
 
 
 export const AboutMe = () => {
   return(
       <>
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col gap-4">
               <h2 className="text-3xl mb-8 relative w-fit">
                   About me
                   <div
@@ -35,6 +36,7 @@ export const AboutMe = () => {
                   She has a passion for Architecture Design and 3D Modeling, and she would
                   love to continue pursuing work in that field.
               </p>
+
           </div>
       </>
   )
