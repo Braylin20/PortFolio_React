@@ -1,14 +1,20 @@
 import {AboutMe} from "./AboutMe.jsx";
 import {Projects} from "./Projects.jsx";
 import {InformationCard} from "./InformationCard.jsx";
+import {SideBar} from "./SideBar.jsx";
 
 export const MainSection = () => {
     return (
         <>
-            <section className=" p-10 overflow-y-auto flex flex-col gap-72 h-screen">
-                <AboutMe/>
-                <InformationCard/>
-                <Projects/>
+            <SideBar/>
+
+            <section className=" p-10 flex flex-col items-center  ">
+                <div className="w-[70%] flex flex-col gap-24">
+
+                    <AboutMe/>
+                    <InformationCard/>
+                    <Projects/>
+                </div>
             </section>
         </>
     );
