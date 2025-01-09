@@ -7,7 +7,7 @@ export const Projects = () => {
 
     return (
         <>
-            <div className="h-screen">
+            <div className="min-h-screen reveal-animation">
                 <h2 className="text-3xl mb-8 relative w-fit">
                     Projects
                     <div
