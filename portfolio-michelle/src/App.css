@@ -1,3 +1,13 @@
+@keyframes appear {
+    from{
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    }
+    to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
 body {
     margin: 0;
     padding: 0;
@@ -12,4 +22,10 @@ body {
     height: 4px;
     background-color: black;
     z-index: 10; /* Ensure snowflakes are behind the cards */
+}
+
+.animation-Scroll{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
 }
