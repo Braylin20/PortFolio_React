@@ -2,6 +2,7 @@ import {NavLink, Outlet} from "react-router";
 import {useEffect} from "react";
 import {AboutMe} from "./AboutMe.jsx";
 import {Projects} from "./Projects.jsx";
+import {InformationCard} from "./InformationCard.jsx";
 
 
 export const MainSection = () => {
@@ -85,8 +86,9 @@ export const MainSection = () => {
                 </section>
 
                 {/* Sección derecha con scroll */}
-                <section className="flex-1 p-10 overflow-y-auto h-screen">
+                <section className=" p-10 overflow-y-auto flex flex-col gap-72 h-screen">
                     <AboutMe/>
+                    <InformationCard/>
                     <Projects/>
                 </section>
             </div>
