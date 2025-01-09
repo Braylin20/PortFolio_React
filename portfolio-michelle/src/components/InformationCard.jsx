@@ -5,9 +5,16 @@ export const InformationCard = () => {
       <>
 
 
+          <div className="reveal-animation">
+              <h2 className="text-3xl mb-8 relative w-fit">
+                  About me
+                  <div
+                      className="absolute bottom-[-10px] left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full"></div>
+              </h2>
               <div
-                  className="w-full bg-white border border-gray-200 rounded-lg shadow mb-20">
+                  className="w-full bg-white border border-gray-200 rounded-lg shadow mb-20 ">
                   <div className="border-t border-gray-200 ">
+
                       <div className="p-4 bg-white rounded-lg md:p-8 " role="tabpanel"
                            aria-labelledby="stats-tab">
                           <dl className="grid max-w-screen-xl grid-cols-3 gap-8 p-4 mx-auto text-gray-900 sm:grid-cols-3 xl:grid-cols-3 sm:p-8">
@@ -39,6 +46,7 @@ export const InformationCard = () => {
                       </div>
                   </div>
               </div>
+          </div>
 
 
       </>
