@@ -1,6 +1,6 @@
 import './App.css';
 import {AppRouter} from "./router/AppRouter.jsx";
-import {SideBar} from "./components/SideBar.jsx";
+
 
 // Snowflake Component
 
@@ -8,8 +8,7 @@ import {SideBar} from "./components/SideBar.jsx";
 function App() {
     return (
         <>
-            <div className="relative h-screen flex gap-16 rounded-lg  bg-white overflow-hidden">
-                <SideBar/>
+            <div className="flex flex-col gap-16 rounded-lg  bg-white ">
                 <AppRouter/>
             </div>
         </>
