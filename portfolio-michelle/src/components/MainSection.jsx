@@ -9,7 +9,7 @@ export const MainSection = () => {
             <SideBar/>
 
             <section className=" p-10 flex flex-col items-center  ">
-                <div className="w-[70%] flex flex-col gap-24">
+                <div className="w-[70%] flex flex-col gap-32">
 
                     <AboutMe/>
                     <InformationCard/>
